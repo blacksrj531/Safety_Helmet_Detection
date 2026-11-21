@@ -20,6 +20,8 @@ android/.gradle
 local.properties
 *.keystore
 !blacksrj-release.keystore
+android/app/src/androidTest/
+android/app/src/test/
 
 # PyTorch / Python cache & virtualenvs
 __pycache__/
@@ -29,6 +31,11 @@ __pycache__/
 venv/
 ENV/
 *.pt
+
+# Local temp & scratch
+models/
+plan.md
+.oxlintrc.json
 
 # Editor directories and files
 .vscode/*
