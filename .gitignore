@@ -19,7 +19,7 @@ android/.gradle
 .gradle
 local.properties
 *.keystore
-!blacksrj-release.keystore
+*.jks
 android/app/src/androidTest/
 android/app/src/test/
 
