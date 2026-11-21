@@ -21,9 +21,9 @@ android {
             def keystoreFile = file('../blacksrj-release.keystore')
             if (keystoreFile.exists()) {
                 storeFile keystoreFile
-                storePassword System.getenv("KEYSTORE_PASSWORD") ?: "blacksrj123"
-                keyAlias System.getenv("KEY_ALIAS") ?: "blacksrj"
-                keyPassword System.getenv("KEY_PASSWORD") ?: "blacksrj123"
+                storePassword System.getenv("KEYSTORE_PASSWORD") ?: (project.findProperty("KEYSTORE_PASSWORD") ?: "")
+                keyAlias System.getenv("KEY_ALIAS") ?: (project.findProperty("KEY_ALIAS") ?: "blacksrj")
+                keyPassword System.getenv("KEY_PASSWORD") ?: (project.findProperty("KEY_PASSWORD") ?: "")
             }
         }
     }
