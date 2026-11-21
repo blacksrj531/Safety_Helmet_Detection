@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Smart Helmet Monitor</string>
+    <string name="title_activity_main">Smart Helmet Monitor</string>
+    <string name="package_name">com.blacksrj.smarthelmet</string>
+    <string name="custom_url_scheme">com.blacksrj.smarthelmet</string>
+</resources>

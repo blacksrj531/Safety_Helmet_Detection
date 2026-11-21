@@ -1,0 +1,11 @@
+{
+  "appId": "com.blacksrj.smarthelmet",
+  "appName": "Smart Helmet Monitor",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "http",
+    "cleartext": true,
+    "allowNavigation": ["192.168.4.1", "192.168.*"]
+  }
+}
