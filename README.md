@@ -15,6 +15,26 @@ An AI-driven safety compliance and hardware actuation ecosystem. The system runs
 
 ---
 
+## 📸 Experimental Results & Hardware Demonstration
+
+The system was evaluated in real-time under practical safety inspection conditions:
+
+### Case 1: Unprotected Head (Trigger OFF - 0°)
+When a person without a safety helmet is detected in frame, the YOLOv8 model classifies the head as **Without Helmet** (Red Box). The app signals the ESP32 over WiFi to maintain/return the TowerPro MG90S servo to **0° (TRIGGER OFF)**.
+
+| Mobile App Detection (Without Helmet) | ESP32 Hardware Status (Servo at 0°) |
+| :---: | :---: |
+| <img src="docs/results/01_no_helmet_detection.jpg" width="340" alt="Without Helmet Detected" /> | <img src="docs/results/02_servo_off_hardware.jpg" width="340" alt="ESP32 Servo at 0 deg" /> |
+
+### Case 2: Safety Helmet Verified (Trigger ON - 90°)
+When a safety helmet or hard hat is worn, the neural model detects it with high confidence (**With Helmet 81%**, Green Box). The system triggers the ESP32 on **GPIO 18**, rotating the MG90S micro servo to **90° (TRIGGER ON)**.
+
+| Mobile App Detection (With Helmet 81%) | ESP32 Hardware Actuation (Servo at 90°) |
+| :---: | :---: |
+| <img src="docs/results/03_helmet_detected_81percent.jpg" width="340" alt="With Helmet 81%" /> | <img src="docs/results/04_servo_on_hardware_90deg.jpg" width="340" alt="ESP32 Servo at 90 deg" /> |
+
+---
+
 ## 🛠️ System Architecture
 
 ```text
